@@ -158,3 +158,47 @@ a.header-left-col__link:hover {
 .header-nav .menu__list--link:hover {
     opacity: 1;
 }
+
+
+
+
+
+
+
+
+.form-wrapper {
+    margin: auto;
+    width: 500px;
+
+    background-color: gainsboro;
+    position: relative;
+}
+
+.form-wrapper .form-title {
+    text-align: center;
+    color: var(--color--primary);
+}
+
+.form-wrapper .form {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper .form-row { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrapper .btn-form-close {
+    font-size: 2rem;
+    color: var(--color--sub-3);
+
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
