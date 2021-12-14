@@ -1,0 +1,21 @@
+:root {
+    --color--primary: #274C77;
+
+    --color--sub-1: #6096BA;
+    --color--sub-2: #A3CEF1;
+    --color--sub-3: #8B8C89;
+    --color--sub-4: #E5E5E5;
+
+    --color--text: #E7ECEF;
+    --color--light: #fff;
+    --color--dark: #000;
+}
+
+html {
+    font-size: 10px;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
