@@ -12,25 +12,27 @@ let adsWrap = document.querySelector('.ads__wrap');
 adsWrap.querySelector('.ads__img').style.backgroundImage = `url(${adsList[0].photo})`;
 adsWrap.querySelector('.ads__img').style.animation = 'fadeIn ease 1s';
 
-setInterval(() => {
+let intervalId = setInterval(showAds, 8000);
+
+function showAds(increment = 1, animation1 = 'fadeOutToLeft', animation2 = 'fadeInToLeft') {
     // xóa quảng cáo hiện tại 
     $('.ads__img').remove();
 
     let div = createAds(adsCurrent);
-    div.style.animation = 'fadeOut ease 1s';
+    div.style.animation = animation1 + ' ease 0.75s';
     adsWrap.appendChild(div);
-    
-    adsCurrent++;
+
+    adsCurrent += increment;
     if (adsCurrent >= adsList.length) adsCurrent = 0;
+    if (adsCurrent < 0) adsCurrent = adsList.length - 1;
 
     // hiển thị quảng cáo mới     
     div = createAds(adsCurrent);
-    div.style.animation = 'fadeIn ease 1s';
+    div.style.animation = animation2 + ' ease 0.75s';
     adsWrap.appendChild(div);
+}
 
-}, 5000);
-
-function createAds(adsCurrent) { 
+function createAds(adsCurrent) {
     let div = document.createElement('div');
     let path = adsList[adsCurrent].photo;
     div.className = 'ads__img';
@@ -38,10 +40,19 @@ function createAds(adsCurrent) {
     // div.style.animation = 'fadeOut ease 1s';
 
     return div;
- }
+}
 
 
 $(document).ready(function () {
+
+    // chuyển quảng cáo
+    $('.btn-left-ads').click(function (e) { 
+        showAds();        
+    });
+
+    $('.btn-right-ads').click(function (e) { 
+        showAds(-1, 'fadeOutToRight', 'fadeInToRight');
+    });
 
     // hiển thị form đăng nhập
     $('.header__btn-wrap .btn-login').click(function (e) {
@@ -67,6 +78,7 @@ $(document).ready(function () {
         $('.form-register-wrapper').css('display', 'none');
     });
 
+    // đóng form
     $('.form-wrapper .btn-form-close').click(function (e) {
         // console.log(this.parentNode);
         this.parentNode.style.display = 'none';
