@@ -164,11 +164,20 @@ a.header-left-col__link:hover {
 
 
 
+.background-fixed-fullscreen {
+    display: none;
+}
 
+.form-login-wrapper,
+.form-register-wrapper {
+    display: none;
+}
 
 .form-wrapper {
     margin: auto;
     width: 500px;
+    padding: 20px 40px;
+    border-radius: 2px;
 
     background-color: gainsboro;
     position: relative;
@@ -176,6 +185,7 @@ a.header-left-col__link:hover {
 
 .form-wrapper .form-title {
     text-align: center;
+    font-size: 2.5rem;
     color: var(--color--primary);
 }
 
@@ -192,13 +202,112 @@ a.header-left-col__link:hover {
 .form-wrapper .form-row { 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+
+    position: relative;
 }
 
+.form-wrapper .form-row .form-username,
+.form-wrapper .form-row .form-password, 
+.form-wrapper .form-row .form-password2 {
+    flex: 1;
+    height: 2rem;
+    font-size: 1.6rem;
+    padding: 3px 8px;
+}
+
+.form-wrapper .form-row .btn-form-login,
+.form-wrapper .form-row .btn-form-register,
+.form-wrapper .form-row .btn-form-switch-login,
+.form-wrapper .form-row .btn-form-switch-register { 
+    font-size: 1.6rem;
+    padding: 3px 8px;
+    background-color: gainsboro;
+}
+
+.form-wrapper .form-row .forgot-password {
+    font-size: 1.4rem;
+}
+
+.form-wrapper .form-row .forgot-password:hover {
+    color: var(--color--sub-1);
+}
+ 
+.form-wrapper .form-row .forgot-password:active {
+    color: red;
+}
+
+.form-wrapper .form-row-item {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper .form-row-item .login-form__chbx-remember + label{
+    font-size: 1.6rem;
+}
+
+.form-wrapper .form-row-item__line {
+    flex: 1;
+    height: 0;
+    border: 1px solid grey;
+}
+
+.form-wrapper .form-row-item__title {
+    padding: 0 10px;
+    font-size: 1.8rem;
+}
+
+.form-wrapper .form-row-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper .form-row-login .btn--login-facebook,
+.form-wrapper .form-row-login .btn--login-google {
+    border: 1px solid;
+    flex: 1;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    outline: none;
+}
+
+.form-wrapper .form-row-login .btn--login-facebook:hover,
+.form-wrapper .form-row-login .btn--login-google:hover { 
+    opacity: 1;
+}
+
+.form-wrapper .form-row-login .btn--login-facebook {
+    background-color: var(--color--primary);
+    color: var(--color--text);
+    opacity: .8;
+}
+
+.form-wrapper .form-row-login .btn--login-google {
+    background-color: rgb(224, 63, 4);
+    color: var(--color--text);
+    opacity: .8;
+}
+
+.form-wrapper .form-row-login i {
+    padding-right: 5px;
+}
+
+
 .form-wrapper .btn-form-close {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--color--sub-3);
 
     position: absolute;
     top: 6px;
     right: 6px;
+}
+
+.form-wrapper .end-form {
+    margin-bottom: 20px;
 }
