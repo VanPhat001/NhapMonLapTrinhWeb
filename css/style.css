@@ -64,6 +64,7 @@ a.header-left-col__link:hover {
     min-width: 125px;
     background-color: var(--color--sub-4);
     color: var(--color--sub-3);
+    z-index: 1;
 
     position: absolute;
     top: calc(100% + 6px);
@@ -104,6 +105,15 @@ a.header-left-col__link:hover {
 .header-left-col__link-language .btn-language {
     height: 2.5rem;
     line-height: 2.5rem;
+}
+
+.btn--select {
+    color: var(--color--dark) !important;
+    font-weight: 650;
+}
+
+.btn--select::before {
+    content: "✓ ";
 }
 
 .header-left-col__link-language .btn-language:hover {
@@ -154,6 +164,10 @@ a.header-left-col__link:hover {
     position: relative;
 }
 
+.header-info__btn-info:hover span {
+    color: var(--color--sub-2);
+}
+
 .header-info__btn-info:hover .info-box {
     display: block;
 }
@@ -174,6 +188,7 @@ a.header-left-col__link:hover {
     /* border-radius: 1px; */
     box-shadow: 1px 3px 7px black;
     font-size: 1.45rem;
+    z-index: 2;
 
     cursor: default;
 }
@@ -267,6 +282,155 @@ a.header-left-col__link:hover {
     opacity: 1;
 }
 
+
+/******************************************************************/
+/*                             main                               */
+/******************************************************************/
+.main {
+    /* height: 120vh; */
+    padding: 30px 0;
+    background-color: #f3efef;
+}
+
+/* ads */
+.ads__wrap {
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.btn-left-ads,
+.btn-right-ads {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    font-size: 3.5rem;
+    color: #274c77;
+
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.btn-left-ads {
+    left: 0;
+}
+
+.btn-right-ads {
+    right: 0;
+}
+
+.btn-left-ads:hover,
+.btn-right-ads:hover {
+    background-color: rgba(220, 220, 220, 0.363);
+}
+
+.ads__img {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(5, 5, 71, 0.522); */
+    /* background-image: url(../image/quangcao/quangcao4.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    /* animation: fadeIn ease 1s; */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        left: 100%;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        left: 0;
+    }
+    to {
+        opacity: 0;
+        left: -100%;
+    }
+}
+
+/* product */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-box {
+    --cols: 4;
+    width: calc(100% / var(--cols));
+    height: 35vh;
+    padding: 5px;
+    min-height: 300px;
+    min-width: 200px;
+
+    box-sizing: border-box;
+}
+
+.product {
+    width: 100%;
+    height: 100%;
+    padding-left: 3px;
+    display: flex;
+
+    text-decoration: none;
+    color: var(--color--dark);
+    flex-direction: column;
+    background-color: var(--color--light);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.product:hover {
+    opacity: .8;
+    box-shadow: 1px 3px 7px gainsboro;
+}
+
+.product--img {
+    flex: 1;
+    background-image: url('https://salt.tikicdn.com/cache/200x200/ts/product/c3/3c/ba/dfbe5e1051c1a1e52b1384e84625897d.jpg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.product--name {
+    --text-size: 1.7rem;
+    --max-line: 2;
+    height:  calc(var(--text-size) * var(--max-line) + 5px);
+    font-size: var(--text-size);    
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-line);
+    overflow: hidden;
+}
+
+.product--price {
+    height: 10%;
+    font-size: 1.7rem;
+    font-weight: 650;
+    margin-top: 5px;
+}
+
 /******************************************************************/
 /*                            footer                              */
 /******************************************************************/
@@ -309,8 +473,6 @@ a.header-left-col__link:hover {
     align-items: center;
     font-size: 1.7rem;
 }
-
-
 
 .btn-goto-header-logo {
     font-size: 4.6rem;

@@ -12,10 +12,14 @@ input:focus {
     border: 2px solid currentColor;
 }
 
+p {
+    margin: 0;
+}
+
 .wrap {
     /* height: 100%;
     width: 100%; */
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
 }
 
