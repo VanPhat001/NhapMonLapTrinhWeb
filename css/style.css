@@ -11,6 +11,10 @@
     --color--dark: #000;
 }
 
+/******************************************************************/
+/*                       header and navbar                        */
+/******************************************************************/
+
 .header {
     background-color: var(--color--primary);
     color: var(--color--text);
@@ -108,7 +112,12 @@ a.header-left-col__link:hover {
     font-weight: 650;
 }
 
-
+.header-right-col .header__btn-wrap .btn-login,
+.header-right-col .header__btn-wrap .btn-register{
+    background-color: gainsboro;
+    padding: 3px 10px;
+    font-weight: 500;
+}
 
 
 .header-logo {
@@ -163,6 +172,10 @@ a.header-left-col__link:hover {
 
 
 
+
+/******************************************************************/
+/*                form đăng nhập và đăng ký                       */
+/******************************************************************/
 
 .background-fixed-fullscreen {
     display: none;
