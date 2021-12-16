@@ -127,7 +127,8 @@
     <main class="main">
         <div class="wrap">
 
-            <div class="prodcut-full-header">
+            <!-- product exchange -->
+            <div class="product-full-header">
                 <div class="product-full__image">
                     <div class="product-full__image-main">img main</div>
                     <div class="product-full__image-sub-wrap">
@@ -140,17 +141,16 @@
                 <div class="product-full__exchange">
                     <h1 class="product-full__exchange-name">Tên sản phẩm Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laboriosam laudantium iste sit distinctio aspernatur sint nihil. At, nesciunt impedit vitae, repellat consectetur placeat, voluptas sunt perferendis quasi saepe autem.</h1>
 
-                    <h1 class="product-full__exchange-price">999.999 đ</h1>
 
                     <div class="product-full__row">
                         <div class="product-full__rating-left">
                             <div class="product-full__rating">
                                 Đánh giá
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="far fa-star star-no-fill"></i>
+                                <i class="far fa-star star-no-fill"></i>
                             </div>
                         </div>
 
@@ -166,6 +166,10 @@
                         </div>
                     </div>
 
+                    <h1 class="product-full__exchange-price">999.999đ 
+                        <span class="btn--effect">0% giảm</span>
+                    </h1>
+
                     <table>
                         <tr>
                             <td>Mã giảm giá của shop</td>
@@ -179,7 +183,34 @@
                         <tr>
                             <td>Vận chuyển</td>
                             <td>
-                                <i class="fas fa-truck"></i> Vận chuyển đến
+                                <i class="fas fa-truck" style="color: var(--color--primary);"></i> 
+                                Vận chuyển đến 
+                                <span class="product-destination">
+                                    Cần Thơ
+                                    <div class="destination-list">
+                                        <ul class="menu menu--vertical">
+                                            <li class="menu__list destination-item">
+                                                Hà Nội
+                                            </li>
+                                            <li class="menu__list destination-item">
+                                                Hồ Chí Minh
+                                            </li>
+                                            <li class="menu__list destination-item">
+                                                Hải Phòng
+                                            </li>
+                                            <li class="menu__list destination-item">
+                                                Đà Nẵng
+                                            </li>
+                                            <li class="menu__list destination-item">
+                                                Cần Thơ
+                                            </li>
+                                            <li class="menu__list destination-item">
+                                                Khác 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </span>
+
                             </td>
                         </tr>
 
@@ -195,15 +226,19 @@
                                 <div class="btn btn--effect btn--purple">Tím</div>
                             </td>
                         </tr>
+
                         <tr>
                             <td>Số lượng</td>
                             <td>
-                                <i class="fas fa-minus btn"></i>
-                                <input type="texts" style="width: 50px; text-align: center;" value="0">
-                                <i class="fas fa-plus btn"></i>
-                                <span>(còn 100 sản phẩm)</span>
+                                <span class="product-full__exchange-buy-btn-wrap">
+                                    <i class="fas fa-minus btn btn-product-inc"></i>
+                                    <input class="product-full__exchange-input" type="text" style="width: 50px;" value="0">
+                                    <i class="fas fa-plus btn btn-product-dec"></i>
+                                </span>
+                                <span class="product-remain">(còn 100 sản phẩm)</span>
                             </td>
                         </tr>
+
                         <tr>
                             <td colspan="2">
                                 <div class="btn btn--effect btn--color-sub-1 btn-add-basket">
@@ -218,23 +253,108 @@
                 </div>
             </div>
 
-
-            <div class="prodcut-full-body">
+            <!-- product description -->
+            <div class="product-full-body">
                 <div class="product-full__desc">
                     thông tin chi tiết sản phẩm
                 </div>
             </div>
 
+            <!-- product comment -->
+            <div class="product-full-footer">
+                <div class="product-full__comment-list">
+                    
+                    <div class="product-full__comment user-cmt">
+                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="user-cmt__desc">
+                            <div class="user-cmt__username">tên người dùng</div>
+                            <div class="user-cmt__rating">
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>                            
+                                <i class="far fa-star star-no-fill"></i>
+                            </div>
+                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
+                        </div>
+                        <div class="user-cmt__option">
+                            <i class="fas fa-ellipsis-v"></i>
 
-            <div class="prodcut-full-footer">
-                <div class="prodcut-full__comment">
-                    bình luận
+                            <div class="user-cmt__option-box">
+                                <div class="user-cmt__option-report">Báo cáo</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-full__comment user-cmt">
+                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="user-cmt__desc">
+                            <div class="user-cmt__username">tên người dùng</div>
+                            <div class="user-cmt__rating">
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>                            
+                                <i class="far fa-star star-no-fill"></i>
+                            </div>
+                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
+                        </div>
+                        <div class="user-cmt__option">
+                            <i class="fas fa-ellipsis-v"></i>
+
+                            <div class="user-cmt__option-box">
+                                <div class="user-cmt__option-report">Báo cáo</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-full__comment user-cmt">
+                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="user-cmt__desc">
+                            <div class="user-cmt__username">tên người dùng</div>
+                            <div class="user-cmt__rating">
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>                            
+                                <i class="far fa-star star-no-fill"></i>
+                            </div>
+                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
+                        </div>
+                        <div class="user-cmt__option">
+                            <i class="fas fa-ellipsis-v"></i>
+
+                            <div class="user-cmt__option-box">
+                                <div class="user-cmt__option-report">Báo cáo</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-full__comment user-cmt">
+                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="user-cmt__desc">
+                            <div class="user-cmt__username">tên người dùng</div>
+                            <div class="user-cmt__rating">
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>
+                                <i class="fas fa-star star-fill"></i>                            
+                                <i class="far fa-star star-no-fill"></i>
+                            </div>
+                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
+                        </div>
+                        <div class="user-cmt__option">
+                            <i class="fas fa-ellipsis-v"></i>
+
+                            <div class="user-cmt__option-box">
+                                <div class="user-cmt__option-report">Báo cáo</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
                 </div>
             </div>
-
-
-
-
 
 
         </div>
