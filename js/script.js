@@ -12,7 +12,7 @@ let adsWrap = document.querySelector('.ads__wrap');
 adsWrap.querySelector('.ads__img').style.backgroundImage = `url(${adsList[0].photo})`;
 adsWrap.querySelector('.ads__img').style.animation = 'fadeIn ease 1s';
 
-let intervalId = setInterval(showAds, 8000);
+let intervalId = setInterval(showAds, 6500);
 
 function showAds(increment = 1, animation1 = 'fadeOutToLeft', animation2 = 'fadeInToLeft') {
     // xóa quảng cáo hiện tại 
