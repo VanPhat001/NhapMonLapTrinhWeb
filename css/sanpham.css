@@ -1,0 +1,91 @@
+.prodcut-full-header {
+    display: flex;
+    padding: 15px;
+    border: 1px solid red;
+    font-size: 1.65rem;
+    background-color: var(--color--light);
+}
+
+.product-full__image{
+    width: 320px;
+
+    border: 1px solid;
+}
+
+.product-full__image-main {
+    width: 320px;
+    border: 1px solid;
+    height: 320px;
+}
+
+.product-full__image-sub-wrap {
+    display: flex; 
+    overflow: hidden;   
+}
+
+.product-full__image-sub {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border: 1px solid;
+}
+
+
+
+
+
+
+
+.product-full__exchange {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.product-full__exchange-name {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.product-full__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-full__rating-left {
+
+}
+
+.product-full__rating-right {
+    display: flex;
+}
+
+.product-full__share {
+    margin-right: 8px;
+}
+
+
+.product-full__exchange table td{
+    padding: 10px 0 0 0;
+}
+
+.product-full__exchange table td + td {
+    padding-left: 10px;
+}
+
+.btn-add-basket, 
+.btn-buy-now {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+}
+
+.btn-buy-now {
+    color: white;
+    background-color: var(--color--primary);    
+}
+
+.btn-buy-now:hover {
+    opacity: .9;
+}
