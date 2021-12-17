@@ -17,27 +17,27 @@ var productList = {
     },
     sp002 : {
         id: 'sp002',
-        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        name: '[Mới 100%] Laptop Dell Inspiron 14 5415 (Ryzen R5-5500U, RAM 8G, SSD 256G, AMD Radeon™ Graphics, màn 14.0 Full HD, IPS)',
         imageList: [
-            'image/sanpham/sp1_0.jpg',
-            'image/sanpham/sp1_1.jpg',
-            'image/sanpham/sp1_2.jpg',
-            'image/sanpham/sp1_3.jpg'
+            'image/sanpham/sp2_0.jpg',
+            'image/sanpham/sp2_1.jpg',
+            'image/sanpham/sp2_2.jpg',
+            'image/sanpham/sp2_3.jpg'
         ],
-        price: 999999,
-        rate: 3,
+        price: 17990000,
+        rate: 5,
         like: false
     },
     sp003 : {
         id: 'sp003',
-        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        name: 'Đồng Hồ Thông Minh HUAWEI WATCH GT 3 46mm |Theo Dõi Spo2 Cả Ngày | Huấn Luyện Viên Chạy Bộ AI',
         imageList: [
-            'image/sanpham/sp1_0.jpg',
-            'image/sanpham/sp1_1.jpg',
-            'image/sanpham/sp1_2.jpg',
-            'image/sanpham/sp1_3.jpg'
+            'image/sanpham/sp3_0.jpg',
+            'image/sanpham/sp3_1.jpg',
+            'image/sanpham/sp3_2.jpg',
+            'image/sanpham/sp3_3.jpg'
         ],
-        price: 999999,
+        price: 6490000,
         rate: 5,
         like: false
     },
@@ -194,6 +194,11 @@ $(document).ready(function () {
         this.parentNode.style.display = 'none';
         $('.background-fixed-fullscreen').css('display', 'none');
 
+    });
+
+    $('.select-language .btn-language').click(function (e) { 
+        $('.select-language .btn--select').removeClass('btn--select');
+        $(this).addClass('btn--select');
     });
 
 });
