@@ -178,6 +178,11 @@
     text-align: center;
     font-size: 1.6rem;
     border: 1px solid gainsboro;
+    outline: none;
+}
+
+.product-full__exchange-input:focus {
+    border: 1px solid gainsboro;
 }
 
 .product-remain {

@@ -1,7 +1,159 @@
 // 'use strict'
 
 
+var productList = {
+    sp001 : {
+        id: 'sp001',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 4,
+        like: true
+    },
+    sp002 : {
+        id: 'sp002',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 3,
+        like: false
+    },
+    sp003 : {
+        id: 'sp003',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 5,
+        like: false
+    },
+    sp004 : {
+        id: 'sp004',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 4,
+        like: false
+    },
+    sp005 : {
+        id: 'sp005',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 2,
+        like: false
+    },
+    sp006 : {
+        id: 'sp006',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 1,
+        like: false
+    },
+    sp007 : {
+        id: 'sp007',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 4,
+        like: false
+    },
+    sp008 : {
+        id: 'sp008',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 4,
+        like: false
+    },
+    sp009 : {
+        id: 'sp009',
+        name: 'Máy Chiếu Phim Mini Beecube X1 Độ Phân Giải HD',
+        imageList: [
+            'image/sanpham/sp1_0.jpg',
+            'image/sanpham/sp1_1.jpg',
+            'image/sanpham/sp1_2.jpg',
+            'image/sanpham/sp1_3.jpg'
+        ],
+        price: 999999,
+        rate: 4,
+        like: false
+    }
+};
+
+// hiển thị danh sách sản phẩm trên trang chủ
+// console.log(productList);
+for (const key in productList) {
+    if (Object.hasOwnProperty.call(productList, key)) {
+        const product = productList[key];
+        // console.log('product >> ', product);
+
+        let div = document.createElement('div');
+        div.className = 'product-box';
+        div.innerHTML = `
+            <a href="sanpham.html" id="${product.id}" class="product" target='_blank'>
+                <div class="product--img" style="background-image: url(${product.imageList[0]})"></div>
+                    <p class="product--name">${product.name}</p>
+                <div class="product--price">${product.price} <u>đ</u></div>
+            </a>`;
+
+        $('.product-list').append(div);
+    }
+}
+
+
+
+
+// function min(a, b) {
+//     return (a < b ? a : b);
+// }
+
 $(document).ready(function () {
+    // lưu thông tin để mở trang sản phẩm
+    $('.product-box a.product').click(function (e) { 
+        // console.log(productList[this.id]);        
+        localStorage.setItem('productId', this.id);
+    });
 
     // chuyển quảng cáo
     $('.btn-left-ads').click(function (e) { 
