@@ -8,10 +8,13 @@
 }
 
 .product-full-header,
+.product-full-body,
 .product-full-footer {
     display: flex;
-    padding: 15px;
-    border: 1px solid red;
+    margin-top: 10px;
+    padding: 16px;
+    /* border: 1px solid red; */
+    box-shadow: 1px 3px 10px gainsboro;
     border-radius: 4px;
     font-size: 1.65rem;
     background-color: var(--color--light);
@@ -22,7 +25,6 @@
 
 .product-full__image{
     width: 320px;
-
     border: 1px solid;
 }
 
@@ -105,16 +107,18 @@
     position: relative;
 }
 
-.product-full__exchange .destination-list {
-    display: none;
-}
+/* .product-full__exchange .destination-list {
+    
+} */
 
 .product-full__exchange .product-destination:hover  .destination-list{
     display: block;
 }
 
-
 .product-full__exchange .destination-list {
+    display: none;
+    cursor: default;
+
     background-color: gainsboro;
     border-radius: 2px;
     padding: 10px 0;
@@ -155,6 +159,7 @@
 .product-full__exchange .destination-item:hover {
     background-color: var(--color--light);
     color: var(--color--dark);
+    cursor: pointer;
 }
 
 .product-full__exchange-buy-btn-wrap {
@@ -195,6 +200,32 @@
 .btn-buy-now:hover {
     opacity: .9;
 }
+
+/*****************************************************/
+/*                product-full-body                  */
+/*****************************************************/
+
+.product-full__desc-wrap {
+    width: 100%;
+}
+
+.product-full__desc-wrap .product-full__desc-title {
+    text-transform: uppercase;
+    background-color: rgba(231, 229, 229, 0.4);
+    border-radius: 2px;
+    padding: 15px;
+}
+
+.product-full__desc-wrap .details-box {
+    padding-left: 15px;
+}
+
+.product-full__desc-wrap table th {
+    text-align: left;
+    padding-right: 10px;
+    min-width: 200px;
+}
+
 
 /*****************************************************/
 /*                product-full-footer                */
