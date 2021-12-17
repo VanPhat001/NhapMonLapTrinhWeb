@@ -95,34 +95,41 @@ p {
     opacity: .5;
 }
 
-.btn--red {
+.color--red {
     color: red !important;
 }
 
-.btn--orange {
+.color--orange {
     color: orange !important;
 }
 
-.btn--yellow {
+.color--yellow {
     color: yellow !important;
 }
 
-.btn--green {
+.color--green {
     color: green !important;
 }
 
-.btn--blue {
+.color--blue {
     color: blue !important;
 }
 
-.btn--purple {
+.color--purple {
     color: purple !important;
 }
 
-.btn--indigo {
+.color--indigo {
     color: indigo !important;
 }
 
-.btn--color-sub-1 {
+.color--sub-1 {
     color: var(--color--sub-1) !important;
+}
+
+.img-box {
+    /* background-image: url(../image/sanpham/sp1_0.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }

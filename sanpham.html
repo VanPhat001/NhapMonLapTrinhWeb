@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/sanpham.css" />
     <script defer src="js/script.js"></script>
+    <script defer src="js/sanpham.js" ></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
             <div class="header-row">
                 <!-- left col - information -->
                 <div class="header-left-col">
-                    <a class="header-left-col__link" href="#">Tải ứng dụng</a>
+                    <a class="header-left-col__link" href="#download-app">Tải ứng dụng</a>
                     <span class="header-left-col__link">
                         Kết nối
                         <i class="fab fa-facebook-square btn header-left-col__icon"></i>
@@ -130,17 +131,16 @@
             <!-- product exchange -->
             <div class="product-full-header">
                 <div class="product-full__image">
-                    <div class="product-full__image-main">img main</div>
+                    <div class="img-box product-full__image-main"></div>
                     <div class="product-full__image-sub-wrap">
-                        <div class="product-full__image-sub">img sub</div>
-                        <div class="product-full__image-sub">img sub</div>
-                        <div class="product-full__image-sub">img sub</div>
+                        <!-- <div class="img-box product-full__image-sub"></div>
+                        <div class="img-box product-full__image-sub"></div>
+                        <div class="img-box product-full__image-sub"></div> -->
                     </div>
                 </div>
 
                 <div class="product-full__exchange">
                     <h1 class="product-full__exchange-name">Tên sản phẩm Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laboriosam laudantium iste sit distinctio aspernatur sint nihil. At, nesciunt impedit vitae, repellat consectetur placeat, voluptas sunt perferendis quasi saepe autem.</h1>
-
 
                     <div class="product-full__row">
                         <div class="product-full__rating-left">
@@ -148,7 +148,7 @@
                                 Đánh giá
                                 <i class="fas fa-star star-fill"></i>
                                 <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
+                                <i class="far fa-star star-no-fill"></i>
                                 <i class="far fa-star star-no-fill"></i>
                                 <i class="far fa-star star-no-fill"></i>
                             </div>
@@ -157,11 +157,11 @@
                         <div class="product-full__rating-right">
                             <div class="btn product-full__share">
                                 <i class="fas fa-share-alt"></i>
-                                share
+                                Share
                             </div>
                             <div class="btn product-full__like">
                                 <i class="fas fa-heart"></i>
-                                like
+                                Like
                             </div>
                         </div>
                     </div>
@@ -174,9 +174,9 @@
                         <tr>
                             <td>Mã giảm giá của shop</td>
                             <td>
-                                <div class="btn btn--effect btn--color-sub-1">Giảm 5%</div>
-                                <div class="btn btn--effect btn--color-sub-1">Giảm 10%</div>
-                                <div class="btn btn--effect btn--color-sub-1">Giảm 50k</div>
+                                <div class="btn btn--effect color--sub-1">Giảm 5%</div>
+                                <div class="btn btn--effect color--sub-1">Giảm 10%</div>
+                                <div class="btn btn--effect color--sub-1">Giảm 50k</div>
                             </td>
                         </tr>
 
@@ -217,13 +217,13 @@
                         <tr>
                             <td>Màu sắc</td>
                             <td>
-                                <div class="btn btn--effect btn--red">Đỏ</div>
-                                <div class="btn btn--effect btn--orange">Cam</div>
-                                <div class="btn btn--effect btn--yellow">Vàng</div>
-                                <div class="btn btn--effect btn--green">Lục</div>
-                                <div class="btn btn--effect btn--blue">Lam</div>
-                                <div class="btn btn--effect btn--indigo">Chàm</div>
-                                <div class="btn btn--effect btn--purple">Tím</div>
+                                <div class="btn btn--effect color--red">Đỏ</div>
+                                <div class="btn btn--effect color--orange">Cam</div>
+                                <div class="btn btn--effect color--yellow">Vàng</div>
+                                <div class="btn btn--effect color--green">Lục</div>
+                                <div class="btn btn--effect color--blue">Lam</div>
+                                <div class="btn btn--effect color--indigo">Chàm</div>
+                                <div class="btn btn--effect color--purple">Tím</div>
                             </td>
                         </tr>
 
@@ -231,9 +231,9 @@
                             <td>Số lượng</td>
                             <td>
                                 <span class="product-full__exchange-buy-btn-wrap">
-                                    <i class="fas fa-minus btn btn-product-inc"></i>
-                                    <input class="product-full__exchange-input" type="text" style="width: 50px;" value="0">
-                                    <i class="fas fa-plus btn btn-product-dec"></i>
+                                    <i class="fas fa-minus btn btn-product-dec"></i>
+                                    <input class="product-full__exchange-input" type="text" style="width: 50px;" value="1">
+                                    <i class="fas fa-plus btn btn-product-inc"></i>
                                 </span>
                                 <span class="product-remain">(còn 100 sản phẩm)</span>
                             </td>
@@ -241,7 +241,7 @@
 
                         <tr>
                             <td colspan="2">
-                                <div class="btn btn--effect btn--color-sub-1 btn-add-basket">
+                                <div class="btn btn--effect color--sub-1 btn-add-basket">
                                     <i class="fas fa-shopping-basket"></i> Thêm vào giỏ hàng
                                 </div>
                                 <div class="btn btn-buy-now">
@@ -253,10 +253,112 @@
                 </div>
             </div>
 
-            <!-- product description -->
+            <!-- product full description -->
             <div class="product-full-body">
-                <div class="product-full__desc">
-                    thông tin chi tiết sản phẩm
+                <div class="product-full__desc-wrap">
+
+                    <!-- chi tiết sản phẩm -->
+                    <div class="product-full__details">
+                        <h2 class="product-full__desc-title">chi tiết sản phẩm</h2>
+                        <div class="details-box">
+                            <table>
+                                <tr>
+                                    <th>Danh mục</th>
+                                    <td>Computer & Accessories</td>
+                                </tr>
+                                <tr>
+                                    <th>Thương hiệu</th>
+                                    <td>BEECUBE</td>
+                                </tr>
+                                <tr>
+                                    <th>Xuất xứ</th>
+                                    <td>Việt Nam</td>
+                                </tr>
+                                <tr>
+                                    <th>Trọng lượng</th>
+                                    <td>1.5kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Gửi từ</th>
+                                    <td>Quận Ba Đình, Hà Nội</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- mô tả sản phẩm -->
+                    <div class="product-full__desc">
+                        <h2 class="product-full__desc-title">mô tả sản phẩm</h2>
+                        <div class="details-box">
+                            <div class="product-full__desc-row">
+                                <i class="fas fa-check-square color--sub-1"></i>
+                                Kích thước nhỏ gọn nhất trong thế giới máy chiếu LED LCD, hiện đại, cực kỳ tiện lợi khi di chuyển (party, phượt, du lịch…)
+                            </div>
+                            <div class="product-full__desc-row">
+                                <i class="fas fa-check-square color--sub-1"></i>
+                                Thoải mái tuỳ chỉnh màn chiếu và góc chiếu, tối đa 120 inch.
+                            </div>
+                            <div class="product-full__desc-row">
+                                <i class="fas fa-check-square color--sub-1"></i>
+                                Tích hợp All in one - Chiếu độ phân giải HD 720p
+                            </div>
+                            <div class="product-full__desc-row">
+                                <i class="fas fa-check-square color--sub-1"></i>
+                                Kết nối wifi, bluetooth với các thiết bị ngoại vi như: Chuột, bàn phím, loa bluetooth
+                            </div>
+                            <div class="product-full__desc-row">
+                                <i class="fas fa-check-square color--sub-1"></i>
+                                Hệ điều hành độc quyền của Beecube chạy Android tùy biến cho smart tivi
+                            </div>
+                            <div class="product-full__desc-row">
+                                <i class="fas fa-check-square color--sub-1"></i>
+                                Thân thiện với người dùng, tùy biến được trong nhiều không gian khác nhau
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- thông số kĩ thuật -->
+                    <div class="product-full__specifications">
+                        <h2 class="product-full__desc-title">thông số kỹ thuật</h2>
+                        <div class="details-box">
+                            <table>
+                                <tr>
+                                    <th>Phân loại</th>
+                                    <td>Máy chiếu kỹ thuật số</td>
+                                </tr>
+                                <tr>
+                                    <th>Kiểu máy</th>
+                                    <td>LCD</td>
+                                </tr>
+                                <tr>
+                                    <th>Phù hợp cho</th>
+                                    <td>Trình chiếu xem phim tại nhà</td>
+                                </tr>
+                                <tr>
+                                    <th>Độ sáng</th>
+                                    <td>3000 LUMENS (150 ansi lumens)</td>
+                                </tr>
+                                <tr>
+                                    <th>Tương phản</th>
+                                    <td>5000:1</td>
+                                </tr>
+                                <tr>
+                                    <th>Phân giải thực</th>
+                                    <td>HD 720P</td>
+                                </tr>
+                                <tr>
+                                    <th>Hỗ trợ đầu vào</th>
+                                    <td>1080p Full HD</td>
+                                </tr>
+                                <tr>
+                                    <th>Tỷ lệ ảnh chiếu</th>
+                                    <td>16:9 hoặc 4:3</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -265,7 +367,7 @@
                 <div class="product-full__comment-list">
                     
                     <div class="product-full__comment user-cmt">
-                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="img-box user-cmt__avatar"></div>
                         <div class="user-cmt__desc">
                             <div class="user-cmt__username">tên người dùng</div>
                             <div class="user-cmt__rating">
@@ -287,7 +389,7 @@
                     </div>
                     
                     <div class="product-full__comment user-cmt">
-                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="img-box user-cmt__avatar"></div>
                         <div class="user-cmt__desc">
                             <div class="user-cmt__username">tên người dùng</div>
                             <div class="user-cmt__rating">
@@ -309,7 +411,7 @@
                     </div>
                     
                     <div class="product-full__comment user-cmt">
-                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="img-box user-cmt__avatar"></div>
                         <div class="user-cmt__desc">
                             <div class="user-cmt__username">tên người dùng</div>
                             <div class="user-cmt__rating">
@@ -331,7 +433,7 @@
                     </div>
                     
                     <div class="product-full__comment user-cmt">
-                        <div class="user-cmt__avatar">avatar</div>
+                        <div class="img-box user-cmt__avatar"></div>
                         <div class="user-cmt__desc">
                             <div class="user-cmt__username">tên người dùng</div>
                             <div class="user-cmt__rating">
@@ -351,7 +453,6 @@
                             </div>
                         </div>
                     </div>
-                    
 
                 </div>
             </div>
@@ -482,7 +583,7 @@
                 <p class="copyright">&copy;Copyright 2021 --- Tất cả các quyền được bảo lưu.</p>
 
                 <div class="footer-download-wrap">
-                    <h2 class="footer-download-title">Tải ứng dụng trên điện thoại</h2>
+                    <h2 id="download-app" class="footer-download-title">Tải ứng dụng trên điện thoại</h2>
                     <div class="footer-download">
                         <img height="80px" src="image/qrcode.png" >
                         <div class="footer-download-btn-wrap">

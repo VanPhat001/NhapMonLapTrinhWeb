@@ -8,10 +8,13 @@
 }
 
 .product-full-header,
+.product-full-body,
 .product-full-footer {
     display: flex;
-    padding: 15px;
-    border: 1px solid red;
+    margin-top: 10px;
+    padding: 16px;
+    /* border: 1px solid red; */
+    box-shadow: 1px 3px 10px gainsboro;
     border-radius: 4px;
     font-size: 1.65rem;
     background-color: var(--color--light);
@@ -22,14 +25,15 @@
 
 .product-full__image{
     width: 320px;
-
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .product-full__image-main {
     width: 320px;
-    border: 1px solid;
+    /* border: 1px solid; */
     height: 320px;
+
+    background-image: url(../image/sanpham/sp1_0.jpg);
 }
 
 .product-full__image-sub-wrap {
@@ -38,10 +42,16 @@
 }
 
 .product-full__image-sub {
+    box-sizing: border-box;
     width: 80px;
     height: 80px;
     min-width: 80px;
-    border: 1px solid;
+    /* border: 1px solid; */
+    background-image: url(../image/sanpham/sp1_0.jpg);
+}
+
+.product-full__image-sub:hover {
+    border: 2px solid var(--color--primary);
 }
 
 
@@ -105,16 +115,18 @@
     position: relative;
 }
 
-.product-full__exchange .destination-list {
-    display: none;
-}
+/* .product-full__exchange .destination-list {
+    
+} */
 
 .product-full__exchange .product-destination:hover  .destination-list{
     display: block;
 }
 
-
 .product-full__exchange .destination-list {
+    display: none;
+    cursor: default;
+
     background-color: gainsboro;
     border-radius: 2px;
     padding: 10px 0;
@@ -155,6 +167,7 @@
 .product-full__exchange .destination-item:hover {
     background-color: var(--color--light);
     color: var(--color--dark);
+    cursor: pointer;
 }
 
 .product-full__exchange-buy-btn-wrap {
@@ -172,6 +185,11 @@
 .product-full__exchange-input {
     text-align: center;
     font-size: 1.6rem;
+    border: 1px solid gainsboro;
+    outline: none;
+}
+
+.product-full__exchange-input:focus {
     border: 1px solid gainsboro;
 }
 
@@ -197,6 +215,32 @@
 }
 
 /*****************************************************/
+/*                product-full-body                  */
+/*****************************************************/
+
+.product-full__desc-wrap {
+    width: 100%;
+}
+
+.product-full__desc-wrap .product-full__desc-title {
+    text-transform: uppercase;
+    background-color: rgba(231, 229, 229, 0.4);
+    border-radius: 2px;
+    padding: 15px;
+}
+
+.product-full__desc-wrap .details-box {
+    padding-left: 15px;
+}
+
+.product-full__desc-wrap table th {
+    text-align: left;
+    padding-right: 10px;
+    min-width: 200px;
+}
+
+
+/*****************************************************/
 /*                product-full-footer                */
 /*****************************************************/
 /* .product-full-footer {
@@ -213,7 +257,11 @@
 }
 
 .user-cmt__avatar {
-    width: 80px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../image/avatar1.png');
+    border-radius: 50%;
+
 }
 
 .user-cmt__desc {

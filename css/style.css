@@ -182,7 +182,7 @@ a.header-left-col__link:hover {
 
 .info-box::before {
     content: "";
-    width: 42%;
+    width: 48%;
     height: 11px;
     background-color: transparent;
 
