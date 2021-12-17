@@ -257,6 +257,8 @@ a.header-left-col__link:hover {
 
 .header-info__btn-basket {
     padding: 0 3px;
+    text-decoration: none;
+    color: var(--color--text);
 }
 
 .header-nav .menu__list--link {

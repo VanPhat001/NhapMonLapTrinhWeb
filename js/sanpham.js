@@ -90,4 +90,9 @@ $(document).ready(function () {
         }
     );
 
+    $('.destination-list .destination-item').click(function (e) { 
+        $('.product-destination-text').text($(this).text());
+        
+    });
+
 });
