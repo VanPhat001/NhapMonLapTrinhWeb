@@ -126,3 +126,10 @@ p {
 .color--sub-1 {
     color: var(--color--sub-1) !important;
 }
+
+.img-box {
+    /* background-image: url(../image/sanpham/sp1_0.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}

@@ -2,6 +2,23 @@ const productId = localStorage.getItem('productId');
 const product = productList[productId];
 console.log(product);
 
+// hiển thị ảnh
+let min = 4;
+if (product.imageList.length < 4) min = product.imageList.length;
+document.querySelector('.product-full__image-main').style.backgroundImage = `url(${product.imageList[0]})`;
+for (let i = 0; i < min; i++)
+{
+    let imagePath = product.imageList[i];
+    // console.log(imagePath);
+    let div = document.createElement('div');
+    div.id = i.toString();
+    div.classList.add('img-box', 'product-full__image-sub');
+    div.style.backgroundImage = `url(${imagePath})`;
+    document.querySelector('.product-full__image-sub-wrap').appendChild(div);
+}
+
+
+
 $(document).ready(function () {
 
 
@@ -62,5 +79,15 @@ $(document).ready(function () {
         }
         return true;
     });
+
+    $('.product-full__image-sub').hover(function () {
+            // over
+            let imgIndex = this.id * 1;
+            $('.product-full__image-main').css('background-image', `url(${product.imageList[imgIndex]})`);
+            
+        }, function () {
+            // out
+        }
+    );
 
 });
