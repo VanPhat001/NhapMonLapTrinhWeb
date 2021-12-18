@@ -59,14 +59,5 @@ function showBasketTable() {
 
 $(document).ready(function () {
 
-    // $('.btn.basket-table__btn-close').click(function (e) {
-
-    //     let tr = this.parentNode.parentNode;
-    //     localStorage.removeItem(tr.id);
-    //     showBasketTable();
-    //     // $(tr).remove();
-        
-
-    // });
 
 });

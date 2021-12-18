@@ -379,13 +379,109 @@ a.header-left-col__link:hover {
 }
 
 /* product */
+.main-content__product {
+    display: flex;
+}
+
+.main-content__product-left-col {
+    width: calc(100% / 4);
+}
+
+.product-category .menu__list {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    margin-right: 15px;
+    --border-radius: 2px;
+}
+
+.menu__list--select {
+    background-color: gainsboro;
+}
+
+.product-category .menu__list:first-child {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.product-category .menu__list:last-child {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.product-category__title {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.product-category .menu__list--link {
+    width: 100%;
+    padding: 5px 10px;
+    color: var(--color--dark);
+    font-size: 1.4rem;
+    overflow: hidden;
+
+}
+
+
+
+
+.main-content__product-right-col {
+    flex: 1;
+}
+
+.product-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.55rem;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.product-filter__change-layout {
+    font-size: 2.3rem;
+}
+
+.product-filter__compare:hover {
+    color: red;
+}
+
+.product-filter__sort, 
+.product-filter__display {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.product-filter__title {   
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+}
+
+.product-filter__sort .sort-select,
+.product-filter__display .display-select {
+    flex: 1;
+    background-color: #f3efef;
+    min-width: 80px;
+    padding: 0 5px;
+    border: none;
+}
+
+.product-filter__sort .sort-select:focus,
+.product-filter__display .display-select:focus {
+    outline: none;
+}
+
+
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
+    --cols: 4;
+}
+
+#product-list {
+    --cols: 3;
 }
 
 .product-box {
-    --cols: 4;
     width: calc(100% / var(--cols));
     height: 35vh;
     padding: 5px;
@@ -444,6 +540,32 @@ a.header-left-col__link:hover {
     font-weight: 650;
     margin-top: 5px;
     text-align: right;
+}
+
+.pagination {
+    margin-top: 10px;    
+    font-size: 1.65rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-pagination {
+    border: 1px solid gray;    
+    font-weight: 700;
+    background-color: gainsboro;
+    color: var(--color--dark);
+
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pagination-prev,
+.btn-pagination-next {
+    font-size: 2.4rem;
 }
 
 /******************************************************************/
