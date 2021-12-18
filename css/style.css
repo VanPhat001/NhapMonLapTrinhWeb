@@ -109,6 +109,22 @@ a.header-left-col__link:hover {
     font-weight: 650;
 }
 
+.header-right-col {
+    display: flex;
+    align-items: center;
+}
+
+.header__avatar {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* cursor: pointer; */
+
+    background-image: url(../image/avatar1.png);
+}
+
 .header-right-col .header__btn-wrap .btn-login,
 .header-right-col .header__btn-wrap .btn-register {
     background-color: gainsboro;

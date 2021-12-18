@@ -120,11 +120,32 @@ var productList = {
 };
 
 var account = [
-    {taikhoan: 'user1@gmail.com', matkhau: '12345678'},
-    {taikhoan: 'user2@gmail.com', matkhau: '12345678'},
-    {taikhoan: 'user3@gmail.com', matkhau: '12345678'},
-    {taikhoan: 'user4@gmail.com', matkhau: '12345678'}
+    {taikhoan: 'user1@gmail.com', matkhau: '12345678', avatar: 'image/avatar1.jpg'},
+    {taikhoan: 'user2@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.jpg'},
+    {taikhoan: 'user3@gmail.com', matkhau: '12345678', avatar: 'image/avatar3.jpg'},
+    {taikhoan: 'user4@gmail.com', matkhau: '12345678', avatar: 'image/avatar2.png'}
 ];
+
+let loginForm = document.querySelector('.form.login-form');
+loginForm.onreset = function () {
+    return false;
+}
+
+// Load dữ liệu cho form đăng nhập và ảnh đại diện
+if (typeof localStorage['indexAccount'] !== "undefined")
+{
+    let indexAccount = localStorage['indexAccount'];
+    if (0 <= indexAccount && indexAccount < account.length)
+    {
+        loginForm.username.value = account[indexAccount].taikhoan;
+        loginForm.pass.value = account[indexAccount].matkhau;
+        changeAvatar(indexAccount);
+    }
+}
+
+function changeAvatar(indexAccount) {  
+    document.querySelector('.header__avatar').style.backgroundImage = `url(${account[indexAccount].avatar})`
+}
 
 // hiển thị danh sách sản phẩm trên trang chủ
 // console.log(productList);
@@ -146,6 +167,7 @@ for (const key in productList) {
     }
 }
 
+// tìm kiếm tài khoản khi form đăng nhập submit
 function findAccount(frm) { 
     let taikhoan = frm.username.value;
     let matkhau = frm.pass.value;
@@ -161,6 +183,7 @@ function findAccount(frm) {
             if (save) {
                 localStorage.setItem('indexAccount', i);
             }
+            changeAvatar(i);
 
             frm.pass.value = '';
             return false;
@@ -245,5 +268,4 @@ $(document).ready(function () {
         $('.select-language .btn--select').removeClass('btn--select');
         $(this).addClass('btn--select');
     });
-
 });
