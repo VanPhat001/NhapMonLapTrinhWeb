@@ -458,10 +458,12 @@ a.header-left-col__link:hover {
 .product-filter__sort .sort-select,
 .product-filter__display .display-select {
     flex: 1;
+    font-size: 1.55rem;
     background-color: #f3efef;
     min-width: 80px;
     padding: 0 5px;
     border: none;
+    cursor: pointer;
 }
 
 .product-filter__sort .sort-select:focus,
@@ -711,8 +713,9 @@ a.header-left-col__link:hover {
     position: relative;
 }
 
-.form-wrapper .form-row .form-phoneNumber,
 .form-wrapper .form-row .form-username,
+.form-wrapper .form-row .form-phoneNumber,
+.form-wrapper .form-row .form-address,
 .form-wrapper .form-row .form-password,
 .form-wrapper .form-row .form-password2 {
     flex: 1;
