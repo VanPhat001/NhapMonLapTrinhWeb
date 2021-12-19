@@ -24,6 +24,10 @@ td, th {
     padding: 10px;
 }
 
+th {
+    vertical-align: middle;
+}
+
 #basket-table .image {
     min-width: 120px;
     /* text-align: center; */
