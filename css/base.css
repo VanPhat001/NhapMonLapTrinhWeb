@@ -32,7 +32,7 @@ p {
 .wrap {
     /* height: 100%;
     width: 100%; */
-    max-width: 1000px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -75,9 +75,7 @@ p {
 
 .btn--effect {
     padding: 3px 10px;
-    text-align: center;
     position: relative;
-    min-width: 70px;
 }
 
 .btn--effect::after {
