@@ -109,11 +109,33 @@ a.header-left-col__link:hover {
     font-weight: 650;
 }
 
+.header-right-col {
+    display: flex;
+    align-items: center;
+}
+
+.header__avatar {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* cursor: pointer; */
+
+    background-image: url(../image/avatar_anonymous.png);
+}
+
 .header-right-col .header__btn-wrap .btn-login,
 .header-right-col .header__btn-wrap .btn-register {
-    background-color: gainsboro;
-    padding: 3px 10px;
+    background-color: transparent;
+    font-size: 1.4rem;
+    padding: 3px 5px;
     font-weight: 500;
+}
+
+.header-right-col .header__btn-wrap .btn-login:hover,
+.header-right-col .header__btn-wrap .btn-register:hover {
+    color: var(--color--sub-1);
 }
 
 .header-logo {
@@ -135,7 +157,9 @@ a.header-left-col__link:hover {
 }
 
 .header-find__btn-find {
-    padding: 3px 15px;
+    min-width: 80px;
+    text-align: center;
+    padding: 3px 0;
     font-size: 1.7rem;
     color: var(--color--primary);
     font-weight: 650;
@@ -227,6 +251,14 @@ a.header-left-col__link:hover {
 .info-box .info__img {
     height: 100%;
     width: 50px;
+
+    display: flex;
+}
+
+.info-box .info__img > i {
+    margin: auto;
+    font-size: 2.5rem;
+    color: rgb(231, 89, 23);
 }
 
 .info-box .info__desc {
@@ -236,10 +268,15 @@ a.header-left-col__link:hover {
 
 .info-box .info__desc--title {
     margin: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .info-box .info__desc--content {
     margin: 0;
+    line-height: 1.8rem;
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -458,10 +495,12 @@ a.header-left-col__link:hover {
 .product-filter__sort .sort-select,
 .product-filter__display .display-select {
     flex: 1;
+    font-size: 1.55rem;
     background-color: #f3efef;
     min-width: 80px;
     padding: 0 5px;
     border: none;
+    cursor: pointer;
 }
 
 .product-filter__sort .sort-select:focus,
@@ -575,11 +614,12 @@ a.header-left-col__link:hover {
 .footer {
     background-color: var(--color--primary);
     color: var(--color--sub-4);
-    padding: 20px 0;
+    padding: 20px 0 60px 0;
 }
 
 .footer-row {
     display: flex;
+    --cols: 4;
 }
 
 .footer-row + .footer-row {
@@ -587,7 +627,8 @@ a.header-left-col__link:hover {
 }
 
 .footer-col {
-    flex: 1;
+    width: calc(100% / var(--cols));
+
     /* border: 1px solid; */
 }
 
@@ -595,6 +636,7 @@ a.header-left-col__link:hover {
 .footer-download-title {
     font-size: 1.6rem;
     margin: 12px 0 4px 0;
+    padding-right: 20px;
 }
 
 .footer-col .menu__list {    
@@ -711,8 +753,9 @@ a.header-left-col__link:hover {
     position: relative;
 }
 
-.form-wrapper .form-row .form-phoneNumber,
 .form-wrapper .form-row .form-username,
+.form-wrapper .form-row .form-phoneNumber,
+.form-wrapper .form-row .form-address,
 .form-wrapper .form-row .form-password,
 .form-wrapper .form-row .form-password2 {
     flex: 1;
