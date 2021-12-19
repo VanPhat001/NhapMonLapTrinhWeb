@@ -298,16 +298,34 @@ a.header-left-col__link:hover {
     color: var(--color--text);
 }
 
+.header-info__btn-basket:hover {
+    color: var(--color--sub-1);
+}
+
+.header-nav-mobile {
+    display: none;
+}
+
+.header-nav-mobile > a {
+    color: var(--color--text);
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+
+.header-nav-mobile > a:hover {
+    color: var(--color--sub-1);
+}
+
 .header-nav .menu__list--link {
     color: var(--color--text);
-    font-size: 1.6rem;
-    opacity: 0.8;
+    font-size: 1.55rem;
+    font-weight: 600;
+    opacity: .8;
 }
 
 .header-nav .menu__list--link:hover {
     opacity: 1;
 }
-
 
 /******************************************************************/
 /*                             main                               */
