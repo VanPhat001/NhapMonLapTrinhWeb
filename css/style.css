@@ -5,7 +5,7 @@
 .header {
     background-color: var(--color--primary);
     color: var(--color--text);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     padding: 5px 0 10px 0;
 }
 
@@ -593,7 +593,8 @@ a.header-left-col__link:hover {
 
 .product--price {
     height: 10%;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
+    color: var(--color--primary);
     font-weight: 650;
     margin-top: 5px;
     text-align: right;
