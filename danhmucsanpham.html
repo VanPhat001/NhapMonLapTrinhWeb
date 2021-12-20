@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang chủ</title>
+    <title>Danh mục sản phẩm</title>
 
     <!-- font awesome -->
     <link rel="stylesheet" href="lib/fontawesome-free-5.15.4-web/css/all.min.css" />
@@ -16,7 +16,7 @@
     <!-- project -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/responsive.css">
     <script defer src="js/script.js"></script>
     <script defer src="js/ads.js"></script>
 </head>
@@ -203,8 +203,10 @@
         </div>
     </header>
 
+
     <main class="main">
         <div class="wrap">
+
             <div class="ads__wrap">
                 <div class="btn btn-left-ads">
                     <i class="fas fa-angle-left"></i>
@@ -215,26 +217,82 @@
                 <div class="ads__img"></div>
             </div>
 
-            <div class="product-list">
-                <!-- <div class="product-box">
-                    <a href="sanpham.html" class="product">
-                        <div class="product--img"></div>
-                        <p class="product--name">Cáp chuyển đổi USB chuẩn C sang Displayport Elecom ababababababba</p>
-                        <div class="product--price">999.999 <u>đ</u></div>
-                    </a>
-                </div> -->
-            </div>
+            <div class="main-content__product">
 
-            <div class="pagination">
-                <div class="btn btn-pagination btn-pagination-prev"><i class="fas fa-caret-left"></i></div>
-                <a href="" class="btn btn-pagination">1</a>
-                <a href="" class="btn btn-pagination">2</a>
-                <a href="" class="btn btn-pagination">3</a>
-                <a href="" class="btn btn-pagination">4</a>
-                <a href="" class="btn btn-pagination">5</a>
-                <div class="btn btn-pagination btn-pagination-next"><i class="fas fa-caret-right"></i></div>
-            </div>
-        </div>
+                <div class="product-category main-content__product-left-col">
+                    <ul class="menu menu--vertical">
+                        <li class="menu__list menu__list--select">
+                            <h2 class="product-category__title">ĐIỆN THOẠI</h2>
+                        </li>
+                        <li class="menu__list menu__list--select"><a href="#" class="menu__list--link">- Iphone</a></li>
+                        <li class="menu__list"><a href="#" class="menu__list--link">- Oppo</a></li>
+                        <li class="menu__list"><a href="#" class="menu__list--link">- Samsung</a></li>
+                    </ul>
+                    <ul class="menu menu--vertical">
+                        <li class="menu__list">
+                            <h2 class="product-category__title">LAPTOP</h2>
+                        </li>
+                    </ul>
+                    <ul class="menu menu--vertical">
+                        <li class="menu__list">
+                            <h2 class="product-category__title">PHỤ KIỆN - LINH KIỆN</h2>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="main-content__product-right-col">
+                    <div class="product-filter">
+                        
+                        <div class="product-filter__change-layout">
+                            <i class="fas fa-list-ul btn btn-change-layout-list"></i>
+                            <i class="fas fa-th btn btn-change-layout-grid"></i>
+                        </div>
+
+                        <a class="btn product-filter__compare" href="#">So sánh sản phẩm</a>
+
+                        <div class="product-filter__sort">
+                            <div class="product-filter__title">Sắp xếp theo</div>
+                            <select class="sort-select">
+                                <option value="">Mặc định</option>
+                                <option value="">Mới nhất</option>
+                                <option value="">Cũ nhất</option>
+                            </select>
+                        </div>
+
+                        <div class="product-filter__display">
+                            <div class="product-filter__title">Hiển thị</div>
+                            <select class="display-select">
+                                <option value="">5</option>
+                                <option value="">10</option>
+                                <option value="">20</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-list" id="product-list">
+                        <!-- <div class="product-box">
+                            <a href="sanpham.html" class="product">
+                                <div class="product--img"></div>
+                                <p class="product--name">Cáp chuyển đổi USB chuẩn C sang Displayport Elecom ababababababba</p>
+                                <div class="product--price">999.999 <u>đ</u></div>
+                            </a>
+                        </div> -->
+                    </div>
+
+
+                    <div class="pagination">
+                        <div class="btn btn-pagination btn-pagination-prev"><i class="fas fa-caret-left"></i></div>
+                        <a href="" class="btn btn-pagination">1</a>
+                        <a href="" class="btn btn-pagination">2</a>
+                        <a href="" class="btn btn-pagination">3</a>
+                        <a href="" class="btn btn-pagination">4</a>
+                        <a href="" class="btn btn-pagination">5</a>
+                        <div class="btn btn-pagination btn-pagination-next"><i class="fas fa-caret-right"></i></div>
+                    </div>
+                </div>
     </main>
 
     <footer class="footer">
@@ -315,10 +373,14 @@
                             </a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__list--link"> <i class="fab fa-twitter-square"></i> Twitter </a>
+                            <a href="#" class="menu__list--link">
+                                <i class="fab fa-twitter-square"></i> Twitter
+                            </a>
                         </li>
                         <li class="menu__list">
-                            <a href="#" class="menu__list--link"> <i class="fab fa-linkedin"></i> Linkedln </a>
+                            <a href="#" class="menu__list--link">
+                                <i class="fab fa-linkedin"></i> Linkedln
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -327,10 +389,11 @@
                     <h2 class="footer__menu-title">Phương thức thanh toán</h2>
                     <ul class="menu menu--vertical">
                         <li class="menu__list">
+
                             <span class="icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_1329:61134" style="mask-type: alpha" maskUnits="userSpaceOnUse"
-                                        x="0" y="6" width="32" height="20">
+                                    <mask id="mask0_1329:61134" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                        y="6" width="32" height="20">
                                         <rect y="6" width="32" height="20" rx="1.81818" fill="white"></rect>
                                     </mask>
                                     <g mask="url(#mask0_1329:61134)">
@@ -424,7 +487,7 @@
                                 </svg></span>
                             <span class="icon"><svg width="32" height="33" viewBox="0 0 32 33" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="3" y="3"
+                                    <mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="3"
                                         width="26" height="27">
                                         <path
                                             d="M10.6917 3.6665L21.3083 3.6665C23.9829 3.6665 24.9528 3.94498 25.9305 4.4679C26.9083 4.99082 27.6757 5.75819 28.1986 6.73597C28.7215 7.71374 29 8.6836 29 11.3582V21.9748C29 24.6494 28.7215 25.6193 28.1986 26.597C27.6757 27.5748 26.9083 28.3422 25.9305 28.8651C24.9528 29.388 23.9829 29.6665 21.3083 29.6665H10.6917C8.0171 29.6665 7.04724 29.388 6.06946 28.8651C5.09169 28.3422 4.32432 27.5748 3.8014 26.597C3.27848 25.6193 3 24.6494 3 21.9748L3 11.3582C3 8.6836 3.27848 7.71374 3.8014 6.73597C4.32432 5.75819 5.09169 4.99082 6.06946 4.4679C7.04724 3.94498 8.0171 3.6665 10.6917 3.6665Z"
@@ -602,14 +665,15 @@
                                         d="M28.789 28.8581V30.9236H27.8256V25.3645H29.9467C30.5661 25.3645 31.0574 25.5262 31.4204 25.8494C31.786 26.1727 31.9688 26.6003 31.9688 27.1323C31.9688 27.677 31.7898 28.1008 31.4318 28.4037C31.0764 28.7066 30.5775 28.8581 29.9352 28.8581H28.789ZM28.789 28.083H29.9467C30.2894 28.083 30.5509 28.0028 30.7311 27.8425C30.9114 27.6796 31.0015 27.4454 31.0015 27.1399C31.0015 26.8396 30.9101 26.6003 30.7273 26.4221C30.5445 26.2414 30.2932 26.1485 29.9733 26.1434H28.789V28.083Z"
                                         fill="#052E5C"></path>
                                 </svg></span>
+
                         </li>
                     </ul>
 
                     <h2 class="footer__menu-title">Chứng nhận bởi</h2>
                     <ul class="menu menu--vertical">
                         <li class="menu__list">
-                            <img height="40px" src="image/bo-cong-thuong-2.png" />
-                            <img height="40px" src="image/bo-cong-thuong.svg" />
+                            <img height="40px" src="image/bo-cong-thuong-2.png">
+                            <img height="40px" src="image/bo-cong-thuong.svg">
                         </li>
                     </ul>
                 </div>
@@ -621,24 +685,20 @@
                 <div class="footer-download-wrap">
                     <h2 id="download-app" class="footer-download-title">Tải ứng dụng trên điện thoại</h2>
                     <div class="footer-download">
-                        <img height="80px" src="image/qrcode.png" />
+                        <img height="80px" src="image/qrcode.png">
                         <div class="footer-download-btn-wrap">
-                            <img height="40px" class="btn btn-footer-download" src="image/appstore.png" />
-                            <img height="40px" class="btn btn-footer-download" src="image/playstore.png" />
+                            <img height="40px" class="btn btn-footer-download" src="image/appstore.png">
+                            <img height="40px" class="btn btn-footer-download" src="image/playstore.png">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="footer-row">
-                <p>
-                    Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba
-                    Đình, Thành phố Hà Nội, Việt Nam.
-                </p>
+                <p>Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình,
+                    Thành phố Hà Nội, Việt Nam.</p>
                 <p>Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn</p>
-                <p>
-                    Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)
-                </p>
+                <p>Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)</p>
                 <p>Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</p>
             </div>
         </div>
@@ -652,15 +712,13 @@
         <!-- form đắng nhập -->
         <div class="form-wrapper form-login-wrapper">
             <h1 class="form-title">Đăng nhập</h1>
-            <form onsubmit="return findAccount(this);" class="form login-form" action="#" method="post"
-                enctype="application/x-www-form-urlencoded">
+            <form onsubmit="return findAccount(this);" class="form login-form" action="#" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="form-row">
-                    <input name="username" class="form-username" type="text" placeholder="Nhập tài khoản (email)"
-                        required />
+                    <input name="username" class="form-username" type="text" placeholder="Nhập tài khoản (email)" required/>
                 </div>
 
                 <div class="form-row">
-                    <input name="pass" type="password" class="form-password" placeholder="Nhập mật khẩu" required />
+                    <input name="pass" type="password" class="form-password" placeholder="Nhập mật khẩu" required/>
                 </div>
 
                 <div class="form-row">
@@ -673,8 +731,7 @@
 
                 <div class="form-row">
                     <div class="form-row-item">
-                        <input name="save" type="checkbox" id="login-form__chbx-remember"
-                            class="login-form__chbx-remember" />
+                        <input name="save" type="checkbox" id="login-form__chbx-remember" class="login-form__chbx-remember" />
                         <label for="login-form__chbx-remember" style="user-select: none">Nhớ tài khoản</label>
                     </div>
                 </div>
@@ -705,16 +762,18 @@
         <!-- form đăng ký -->
         <div class="form-wrapper form-register-wrapper">
             <h1 class="form-title">Đăng ký tài khoản</h1>
-            <form onsubmit="return validate(this);" class="form register-form" action="#" method="post"
-                enctype="application/x-www-form-urlencoded">
+            <form onsubmit="return validate(this);" class="form register-form" action="#" method="post" enctype="application/x-www-form-urlencoded">
+
                 <div class="form-row">
                     <input class="form-username" type="text" placeholder="Nhập tài khoản (email)"
-                        pattern="^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$" required title="Tài khoản không hợp lệ" />
+                        pattern="^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$"
+                        required  title="Tài khoản không hợp lệ" />
                 </div>
 
                 <div class="form-row">
-                    <input class="form-phoneNumber" type="text" placeholder="Nhập số điện thoại" pattern="[0-9]{10,10}"
-                        required title="SĐT phải có 10 chữ số" />
+                    <input class="form-phoneNumber" type="text" placeholder="Nhập số điện thoại"
+                        pattern="[0-9]{10,10}"
+                        required title="SĐT phải có 10 chữ số"/>
                 </div>
 
                 <div class="form-row">
@@ -722,13 +781,13 @@
                 </div>
 
                 <div class="form-row">
-                    <input name="pass" type="password" class="form-password" placeholder="Nhập mật khẩu" pattern=".{8,}"
-                        required title="Mật khẩu có ít nhất 8 kí tự" />
+                    <input name="pass" type="password" class="form-password" placeholder="Nhập mật khẩu"
+                        pattern=".{8,}"
+                        required title="Mật khẩu có ít nhất 8 kí tự"/>
                 </div>
 
                 <div class="form-row">
-                    <input name="pass2" type="password" class="form-password2" placeholder="Nhập lại mật khẩu"
-                        required />
+                    <input name="pass2" type="password" class="form-password2" placeholder="Nhập lại mật khẩu" required/>
                 </div>
 
                 <div class="form-row">

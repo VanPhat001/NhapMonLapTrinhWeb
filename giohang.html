@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sản phẩm</title>
+    <title>Giỏ hàng</title>
 
     <!-- font awesome -->
     <link rel="stylesheet" href="lib/fontawesome-free-5.15.4-web/css/all.min.css" />
@@ -16,13 +16,13 @@
     <!-- project -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/sanpham.css" />
+    <link rel="stylesheet" href="css/giohang.css" />
     <link rel="stylesheet" href="css/responsive.css">
     <script defer src="js/script.js"></script>
-    <script defer src="js/sanpham.js" ></script>
+    <script defer src="js/giohang.js"></script>
 </head>
 
-<body id="product-full">
+<body>
     <header class="header">
         <div class="wrap">
             <!-- top row  -->
@@ -204,342 +204,56 @@
         </div>
     </header>
 
-
     <main class="main">
-        <div class="wrap">
+        <div class="wrap basket-wrap">
 
-            <!-- product exchange -->
-            <div class="product-full-header">
-                <div class="product-full__image">
-                    <div class="img-box product-full__image-main"></div>
-                    <div class="product-full__image-sub-wrap">
-                        <!-- <div class="img-box product-full__image-sub"></div>
-                        <div class="img-box product-full__image-sub"></div>
-                        <div class="img-box product-full__image-sub"></div> -->
-                    </div>
-                </div>
+            <table id="basket-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Ảnh sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                <div class="product-full__exchange">
-                    <h1 class="product-full__exchange-name">Tên sản phẩm Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laboriosam laudantium iste sit distinctio aspernatur sint nihil. At, nesciunt impedit vitae, repellat consectetur placeat, voluptas sunt perferendis quasi saepe autem.</h1>
+                    <tr>
+                        <td class="image">
+                            <div class="img-box basket-table__img"></div>
+                        </td>
+                        <td class="name">
+                            <p class="basket-table__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, velit dignissimos. Repellat itaque quae eum assumenda vitae. Dolorum temporibus fugit, perferendis nihil placeat labore ipsam tempora! Adipisci ea laborum tenetur?</p>
+                        </td>
+                        <td class="quantily">
+                            <p class="basket-table__quantily">5</p>
+                        </td>
+                        <td class="price">
+                            <p class="basket-table__price">999.999 <u>đ</u></p>
+                        </td>
+                        <td class="del">
+                            <i class="fas fa-window-close btn basket-table__btn-close"></i>
+                        </td>
+                    </tr>
 
-                    <div class="product-full__row">
-                        <div class="product-full__rating-left">
-                            <div class="product-full__rating">
-                                Đánh giá
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="far fa-star star-no-fill"></i>
-                                <i class="far fa-star star-no-fill"></i>
-                                <i class="far fa-star star-no-fill"></i>
-                            </div>
-                        </div>
-
-                        <div class="product-full__rating-right">
-                            <div class="btn product-full__share">
-                                <i class="fas fa-share-alt"></i>
-                                Share
-                            </div>
-                            <div class="btn product-full__like">
-                                <i class="fas fa-heart"></i>
-                                Like
-                            </div>
-                        </div>
-                    </div>
-
-                    <h1 class="product-full__exchange-price">999.999đ 
-                        <span class="btn--effect">0% giảm</span>
-                    </h1>
-
-                    <table>
-                        <tr>
-                            <td>Mã giảm giá của shop</td>
-                            <td>
-                                <div class="btn btn--effect color--sub-1">Giảm 5%</div>
-                                <div class="btn btn--effect color--sub-1">Giảm 10%</div>
-                                <div class="btn btn--effect color--sub-1">Giảm 50k</div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Vận chuyển</td>
-                            <td>
-                                <i class="fas fa-truck" style="color: var(--color--primary);"></i> 
-                                Vận chuyển đến 
-                                <span class="product-destination">
-                                    <span class="product-destination-text">Cần Thơ</span> 
-                                    <div class="destination-list">
-                                        <ul class="menu menu--vertical">
-                                            <li class="menu__list destination-item">
-                                                Hà Nội
-                                            </li>
-                                            <li class="menu__list destination-item">
-                                                Hồ Chí Minh
-                                            </li>
-                                            <li class="menu__list destination-item">
-                                                Hải Phòng
-                                            </li>
-                                            <li class="menu__list destination-item">
-                                                Đà Nẵng
-                                            </li>
-                                            <li class="menu__list destination-item">
-                                                Cần Thơ
-                                            </li>
-                                            <li class="menu__list destination-item">
-                                                Khác 
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </span>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Màu sắc</td>
-                            <td>
-                                <div class="btn btn--effect color--red">Đỏ</div>
-                                <div class="btn btn--effect color--orange">Cam</div>
-                                <div class="btn btn--effect color--yellow">Vàng</div>
-                                <div class="btn btn--effect color--green">Lục</div>
-                                <div class="btn btn--effect color--blue">Lam</div>
-                                <div class="btn btn--effect color--indigo">Chàm</div>
-                                <div class="btn btn--effect color--purple">Tím</div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Số lượng</td>
-                            <td>
-                                <span class="product-full__exchange-buy-btn-wrap">
-                                    <i class="fas fa-minus btn btn-product-dec"></i>
-                                    <input class="product-full__exchange-input" type="text" style="width: 50px;" value="1">
-                                    <i class="fas fa-plus btn btn-product-inc"></i>
-                                </span>
-                                <span class="product-remain">(còn 100 sản phẩm)</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2">
-                                <div class="btn btn--effect color--sub-1 btn-add-basket">
-                                    <i class="fas fa-shopping-basket"></i> Thêm vào giỏ hàng
-                                </div>
-                                <div class="btn btn-buy-now">
-                                    <i class="fas fa-cart-arrow-down"></i> Mua ngay
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- product full description -->
-            <div class="product-full-body">
-                <div class="product-full__desc-wrap">
-
-                    <!-- chi tiết sản phẩm -->
-                    <div class="product-full__details">
-                        <h2 class="product-full__desc-title">chi tiết sản phẩm</h2>
-                        <div class="details-box">
-                            <table>
-                                <tr>
-                                    <th>Danh mục</th>
-                                    <td>Computer & Accessories</td>
-                                </tr>
-                                <tr>
-                                    <th>Thương hiệu</th>
-                                    <td>BEECUBE</td>
-                                </tr>
-                                <tr>
-                                    <th>Xuất xứ</th>
-                                    <td>Việt Nam</td>
-                                </tr>
-                                <tr>
-                                    <th>Trọng lượng</th>
-                                    <td>1.5kg</td>
-                                </tr>
-                                <tr>
-                                    <th>Gửi từ</th>
-                                    <td>Quận Ba Đình, Hà Nội</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- mô tả sản phẩm -->
-                    <div class="product-full__desc">
-                        <h2 class="product-full__desc-title">mô tả sản phẩm</h2>
-                        <div class="details-box">
-                            <div class="product-full__desc-row">
-                                <i class="fas fa-check-square color--sub-1"></i>
-                                Kích thước nhỏ gọn nhất trong thế giới máy chiếu LED LCD, hiện đại, cực kỳ tiện lợi khi di chuyển (party, phượt, du lịch…)
-                            </div>
-                            <div class="product-full__desc-row">
-                                <i class="fas fa-check-square color--sub-1"></i>
-                                Thoải mái tuỳ chỉnh màn chiếu và góc chiếu, tối đa 120 inch.
-                            </div>
-                            <div class="product-full__desc-row">
-                                <i class="fas fa-check-square color--sub-1"></i>
-                                Tích hợp All in one - Chiếu độ phân giải HD 720p
-                            </div>
-                            <div class="product-full__desc-row">
-                                <i class="fas fa-check-square color--sub-1"></i>
-                                Kết nối wifi, bluetooth với các thiết bị ngoại vi như: Chuột, bàn phím, loa bluetooth
-                            </div>
-                            <div class="product-full__desc-row">
-                                <i class="fas fa-check-square color--sub-1"></i>
-                                Hệ điều hành độc quyền của Beecube chạy Android tùy biến cho smart tivi
-                            </div>
-                            <div class="product-full__desc-row">
-                                <i class="fas fa-check-square color--sub-1"></i>
-                                Thân thiện với người dùng, tùy biến được trong nhiều không gian khác nhau
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- thông số kĩ thuật -->
-                    <div class="product-full__specifications">
-                        <h2 class="product-full__desc-title">thông số kỹ thuật</h2>
-                        <div class="details-box">
-                            <table>
-                                <tr>
-                                    <th>Phân loại</th>
-                                    <td>Máy chiếu kỹ thuật số</td>
-                                </tr>
-                                <tr>
-                                    <th>Kiểu máy</th>
-                                    <td>LCD</td>
-                                </tr>
-                                <tr>
-                                    <th>Phù hợp cho</th>
-                                    <td>Trình chiếu xem phim tại nhà</td>
-                                </tr>
-                                <tr>
-                                    <th>Độ sáng</th>
-                                    <td>3000 LUMENS (150 ansi lumens)</td>
-                                </tr>
-                                <tr>
-                                    <th>Tương phản</th>
-                                    <td>5000:1</td>
-                                </tr>
-                                <tr>
-                                    <th>Phân giải thực</th>
-                                    <td>HD 720P</td>
-                                </tr>
-                                <tr>
-                                    <th>Hỗ trợ đầu vào</th>
-                                    <td>1080p Full HD</td>
-                                </tr>
-                                <tr>
-                                    <th>Tỷ lệ ảnh chiếu</th>
-                                    <td>16:9 hoặc 4:3</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <!-- product comment -->
-            <div class="product-full-footer">
-                <div class="product-full__comment-list">
-                    
-                    <div class="product-full__comment user-cmt">
-                        <div class="img-box user-cmt__avatar"></div>
-                        <div class="user-cmt__desc">
-                            <div class="user-cmt__username">tên người dùng</div>
-                            <div class="user-cmt__rating">
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>                            
-                                <i class="far fa-star star-no-fill"></i>
-                            </div>
-                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
-                        </div>
-                        <div class="user-cmt__option">
-                            <i class="fas fa-ellipsis-v"></i>
-
-                            <div class="user-cmt__option-box">
-                                <div class="user-cmt__option-report">Báo cáo</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product-full__comment user-cmt">
-                        <div class="img-box user-cmt__avatar"></div>
-                        <div class="user-cmt__desc">
-                            <div class="user-cmt__username">tên người dùng</div>
-                            <div class="user-cmt__rating">
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>                            
-                                <i class="far fa-star star-no-fill"></i>
-                            </div>
-                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
-                        </div>
-                        <div class="user-cmt__option">
-                            <i class="fas fa-ellipsis-v"></i>
-
-                            <div class="user-cmt__option-box">
-                                <div class="user-cmt__option-report">Báo cáo</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product-full__comment user-cmt">
-                        <div class="img-box user-cmt__avatar"></div>
-                        <div class="user-cmt__desc">
-                            <div class="user-cmt__username">tên người dùng</div>
-                            <div class="user-cmt__rating">
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>                            
-                                <i class="far fa-star star-no-fill"></i>
-                            </div>
-                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
-                        </div>
-                        <div class="user-cmt__option">
-                            <i class="fas fa-ellipsis-v"></i>
-
-                            <div class="user-cmt__option-box">
-                                <div class="user-cmt__option-report">Báo cáo</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product-full__comment user-cmt">
-                        <div class="img-box user-cmt__avatar"></div>
-                        <div class="user-cmt__desc">
-                            <div class="user-cmt__username">tên người dùng</div>
-                            <div class="user-cmt__rating">
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>
-                                <i class="fas fa-star star-fill"></i>                            
-                                <i class="far fa-star star-no-fill"></i>
-                            </div>
-                            <div class="user-cmt__content">Chất lượng tuyệt vời, giao hàng nhanh , mua được lúc giảm giá Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo veritatis sapiente. Doloribus voluptatum dolore unde accusantium debitis molestias ipsam quis perferendis error! Earum eveniet illum commodi nisi, aliquid ipsam.</div>
-                        </div>
-                        <div class="user-cmt__option">
-                            <i class="fas fa-ellipsis-v"></i>
-
-                            <div class="user-cmt__option-box">
-                                <div class="user-cmt__option-report">Báo cáo</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Thành tiền</th>
+                        <td colspan="2" class="total-price">999999</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" align="center">
+                            <button class="btn" style="background-color: gainsboro; padding: 3px 12px; font-size: 1.5rem;">Xác nhận đơn hàng</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
 
         </div>
     </main>
+
 
     <footer class="footer">
         <div class="wrap">

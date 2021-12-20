@@ -2,6 +2,8 @@ const productId = localStorage.getItem('productId');
 const product = productList[productId];
 console.log(product);
 
+document.querySelector('#product-full main').id = productId;
+
 // hiển thị ảnh
 let min = 4;
 if (product.imageList.length < 4) min = product.imageList.length;
@@ -20,7 +22,6 @@ for (let i = 0; i < min; i++)
 
 
 $(document).ready(function () {
-
 
     $('.product-full__exchange-name').text(product.name);
     $('.product-full__exchange-price').html(
@@ -89,5 +90,33 @@ $(document).ready(function () {
             // out
         }
     );
+
+    $('.destination-list .destination-item').click(function (e) { 
+        $('.product-destination-text').text($(this).text());
+        
+    });
+
+    $('#product-full .btn-add-basket').click(function (e) { 
+        let id = document.querySelector('#product-full .main').id;
+        
+
+        const productRemain = 100;
+        if (typeof localStorage[id] === 'undefined')
+        {
+            localStorage.setItem(id, 0);
+        }
+        
+        let productOdd = localStorage[id]*1;
+        let productCurrent = document.querySelector('#product-full .product-full__exchange-input').value*1;
+        let s = productOdd + productCurrent;
+        if (s > productRemain)
+        {
+            alert(`còn ${productRemain} sản phẩm, chỉ được thêm tối đa ${productRemain - productOdd} sản phẩm vào giỏ hàng`);
+            return;
+        }
+
+        localStorage[id] = s;
+        alert(`Đã thêm ${productCurrent} sản phẩm vào giỏ hàng`)
+    });
 
 });
